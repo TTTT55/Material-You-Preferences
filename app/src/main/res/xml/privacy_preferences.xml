@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialSwitchPreference
+        android:title="Password protection"
+        android:key="password_enabled"
+        android:icon="@drawable/setting_icon_lock"/>
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialSwitchPreference
+        android:title="Auto lock"
+        android:key="auto_lock_enabled"
+        android:enabled="false"/>
+</PreferenceScreen>

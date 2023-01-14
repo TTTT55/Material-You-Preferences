@@ -7,13 +7,19 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.NestedScrollView;
+import androidx.fragment.app.Fragment;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
-public abstract class MaterialPreferencesFragment extends PreferenceFragmentCompat implements View.OnScrollChangeListener {
+public abstract class MaterialPreferencesFragment extends PreferenceFragmentCompat
+        implements View.OnScrollChangeListener {
 
     int COLOR_TRANSPARENT;
     int COLOR_ON_SURFACE_INVERSE;
@@ -38,16 +44,40 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
         mToolbarTitle = view.findViewById(R.id.toolbarTitle);
         mTitle = view.findViewById(R.id.textViewTitle);
 
-        if(mSettingsScrollView != null
-                && mToolbar != null
-                && mToolbarTitle != null
-                && mTitle != null) {
-            mSettingsScrollView.setOnScrollChangeListener(this);
+        // Set title from args
+        Bundle args = getArguments();
+        if(args != null) {
+            CharSequence title = args.getCharSequence("title");
+            if (title != null) {
+                setTitle(title);
+            }
         }
 
         // Resolve colors for status bar
         COLOR_TRANSPARENT = ContextCompat.getColor(getContext(), android.R.color.transparent);
         COLOR_ON_SURFACE_INVERSE = Util.resolveColorAttr(getContext(), com.google.android.material.R.attr.colorOnSurfaceInverse);
+
+        // Set back button
+        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+        ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        if(ab != null){
+            ab.setDisplayHomeAsUpEnabled(true);
+            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ((AppCompatActivity) getActivity()).getSupportFragmentManager().popBackStack();
+                }
+            });
+        }
+
+        if(mSettingsScrollView != null
+                && mToolbar != null
+                && mToolbarTitle != null
+                && mTitle != null) {
+            mToolbar.setBackgroundColor(COLOR_TRANSPARENT);
+            mToolbarTitle.setAlpha(0);
+            mSettingsScrollView.setOnScrollChangeListener(this);
+        }
     }
 
     //TODO avoid setting color every time this is called
@@ -68,5 +98,15 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
             mToolbar.setBackgroundColor(COLOR_TRANSPARENT);
             getActivity().getWindow().setStatusBarColor(COLOR_TRANSPARENT);
         }
+    }
+
+    public void setTitle(CharSequence title) {
+        mTitle.setText(title);
+        mToolbarTitle.setText(title);
+    }
+
+    public void setTitle(int stringRes) {
+        mTitle.setText(stringRes);
+        mToolbarTitle.setText(stringRes);
     }
 }

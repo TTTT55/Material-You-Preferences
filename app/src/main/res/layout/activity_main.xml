@@ -9,7 +9,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/settingsFragment"
-        android:name="io.github.tstewart.materialpreferencesfragment.SamplePreferencesFragment"
+        android:name="io.github.tstewart.materialpreferencesfragment.sample.MainPreferenceFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

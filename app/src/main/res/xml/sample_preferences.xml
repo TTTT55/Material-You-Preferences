@@ -45,7 +45,7 @@
             android:defaultValue="1"
             android:entries="@android:array/phoneTypes"
             android:entryValues="@android:array/phoneTypes"
-            android:key="list_preference"
+            android:key="list_preference_2"
             android:title="List (no icon)"
             app:summary="Lorem Ipsum" />
     </PreferenceCategory>
@@ -61,7 +61,7 @@
             android:defaultValue="@android:array/emailAddressTypes"
             android:entries="@android:array/emailAddressTypes"
             android:entryValues="@android:array/emailAddressTypes"
-            android:key="multi_select_list_preference_1"
+            android:key="multi_select_list_preference_2"
             android:title="Multi select (no icon)"/>
     </PreferenceCategory>
 </PreferenceScreen>

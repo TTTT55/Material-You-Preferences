@@ -1,8 +1,11 @@
-package io.github.tstewart.materialpreferencesfragment;
+package io.github.tstewart.materialpreferencesfragment.sample;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+
+import io.github.tstewart.materialpreferencesfragment.MaterialPreferencesFragment;
+import io.github.tstewart.materialpreferencesfragment.R;
 
 public class SamplePreferencesFragment extends MaterialPreferencesFragment {
     @Override

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialSwitchPreference
+        android:title="Gestures"
+        android:key="gestures_enabled"
+        android:icon="@drawable/settings_icon_gesture"/>
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialSwitchPreference
+        android:title="Auto clipping"
+        android:key="clipping_enabled"
+        android:icon="@drawable/settings_icon_clip"/>
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialListPreference
+        android:title="Maximum Rating"
+        android:key="max_rating"
+        android:icon="@drawable/settings_icon_mood"
+        android:entries="@array/day_ratings_key"
+        android:entryValues="@array/day_ratings_value"/>
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        app:title="Restore backup"
+        app:key="restore_backup"/>
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        app:title="Force backup"
+        app:key="force_backup"/>
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        app:title="Erase all data"
+        app:key="erase_data"/>
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        app:title="Last backed up"
+        app:key="last_backed_up"
+        android:enabled="false"/>
+</PreferenceScreen>

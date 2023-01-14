@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialSwitchPreference
+        android:title="Notifications"
+        android:key="notifications_enabled"
+        android:icon="@drawable/settings_icon_notifications_off"/>
+    <io.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        android:title="Notification Time"
+        android:key="notification_time"
+        android:enabled="false"/>
+</PreferenceScreen>
