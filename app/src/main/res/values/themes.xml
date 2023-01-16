@@ -42,6 +42,14 @@
         <item name="android:paddingBottom">12dp</item>
     </style>
 
+    <style name="Theme.AppTheme.MaterialPreferenceHeaderSwitch" parent="Theme.AppTheme.MaterialPreference">
+        <item name="background">@drawable/header_switch_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
     <style name="Theme.AppTheme.MaterialPreference.Icon">
         <item name="android:tint">?colorOnSurface</item>
         <item name="android:paddingLeft">0dp</item>

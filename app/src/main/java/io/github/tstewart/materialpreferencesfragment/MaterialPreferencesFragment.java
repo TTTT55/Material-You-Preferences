@@ -62,12 +62,7 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
         ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if(ab != null){
             ab.setDisplayHomeAsUpEnabled(true);
-            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    ((AppCompatActivity) getActivity()).getSupportFragmentManager().popBackStack();
-                }
-            });
+            mToolbar.setNavigationOnClickListener(view1 -> getActivity().getSupportFragmentManager().popBackStack());
         }
 
         if(mSettingsScrollView != null

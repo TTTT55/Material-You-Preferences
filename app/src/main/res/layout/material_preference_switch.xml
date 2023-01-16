@@ -49,6 +49,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                app:trackTint="@color/switch_track_color"
+                app:thumbTint="@color/switch_thumb_color"
                 android:clickable="false"/>
         </RelativeLayout>
 
