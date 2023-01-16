@@ -24,7 +24,8 @@
     <io.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
         android:title="All Settings Elements"
         app:icon="@drawable/ic_draw"
-        app:fragment="io.github.tstewart.materialpreferencesfragment.sample.SamplePreferencesFragment"/>
+        app:fragment="io.github.tstewart.materialpreferencesfragment.sample.SamplePreferencesFragment"
+        app:summary="Testing stuff"/>
     <PreferenceCategory
         app:title="About">
         <io.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
