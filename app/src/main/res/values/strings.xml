@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MaterialPreferencesFragment</string>
+    <string name="preferences_page_title_default">Settings</string>
+</resources>

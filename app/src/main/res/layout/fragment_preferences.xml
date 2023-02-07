@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/Theme.AppTheme.MaterialPreferencesFragment.Style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorOnSurfaceInverse">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                style="@style/TextAppearance.Material3.TitleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Settings">
+
+            </TextView>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/settingsScrollView">
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewTitle"
+                style="@style/Theme.AppTheme.MaterialPreferencesFragment.Title"
+                android:layout_height="wrap_content"
+                android:layout_width="240dp"
+                android:text="@string/preferences_page_title_default" />
+
+            <FrameLayout
+                android:id="@android:id/list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

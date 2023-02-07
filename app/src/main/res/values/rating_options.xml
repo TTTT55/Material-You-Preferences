@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="day_ratings_key">
+        <item>5</item>
+        <item>10</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="day_ratings_value">
+        <item>5</item>
+        <item>10</item>
+        <item>100</item>
+    </string-array>
+</resources>

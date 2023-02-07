@@ -1,0 +1,105 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
+
+        <item name="android:statusBarColor">?colorSurface</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="preferenceFragmentCompatStyle">@style/Theme.AppTheme.MaterialPreferencesFragment</item>
+        <item name="preferenceCategoryStyle">@style/Theme.AppTheme.MaterialPreferenceCategory</item>
+
+        <item name="materialAlertDialogTheme">@style/Theme.AppTheme.MaterialDialog</item>
+        <item name="alertDialogTheme">@style/Theme.AppTheme.MaterialDialog</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreference">
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialDialog" parent="ThemeOverlay.Material3.Dialog.Alert">
+        <item name="dialogCornerRadius">28dp</item>
+        <item name="android:background">@drawable/dialog_bg</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreferenceHeaderSwitch" parent="Theme.AppTheme.MaterialPreference">
+        <item name="background">@drawable/header_switch_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreference.Icon">
+        <item name="android:tint">?colorOnSurface</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreference.Summary" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:tint">?colorOnSurface</item>
+        <item name="android:layout_gravity">fill</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreference.Switch">
+        <item name="track">@drawable/switch_track</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreferencesFragment">
+        <item name="android:layout">@layout/fragment_preferences</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreferencesFragment.Style">
+        <item name="android:background">?colorSurface</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreferencesFragment.Title" parent="@style/TextAppearance.Material3.HeadlineLarge">
+        <item name="android:paddingTop">48dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreferenceCategory">
+        <item name="android:layout">@layout/material_preference_category</item>
+    </style>
+
+    <style name="Theme.AppTheme.MaterialPreferenceCategory.Text" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>
