@@ -1,7 +1,4 @@
-plugins {
-    id 'com.android.library'
-}
-
+apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
@@ -20,12 +17,13 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    defaultPublishConfig "productionRelease"
+    publishNonDefault true
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -42,14 +40,29 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'com.github.tstewart'
-            artifactId = 'Android-Preferences-M3'
+            groupId = 'io.github.tstewart'
+            artifactId = 'MaterialPreferencesFragment'
             version = '0.1'
+        }
+    }
+}
+
+if( android.productFlavors.size() > 0 ) {
+    android.libraryVariants.all { variant ->
+        if( android.publishNonDefault && variant.name == android.defaultPublishConfig ) {
+            def bundleTask = tasks["bundle${name.capitalize()}"]
+            artifacts {
+                archives(bundleTask.archivePath) {
+                    classifier null
+                    builtBy bundleTask
+                }
+            }
         }
     }
 }
