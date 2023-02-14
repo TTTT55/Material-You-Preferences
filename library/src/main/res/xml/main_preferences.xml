@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        android:title="General"
+        android:summary="General application features"
+        app:icon="@drawable/ic_settings"
+        app:fragment="com.github.tstewart.materialpreferencesfragment.sample.GeneralPreferenceFragment"/>
+    <com.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        android:title="Privacy"
+        android:summary="Password protection and auto locking"
+        app:icon="@drawable/ic_lock"
+        app:fragment="com.github.tstewart.materialpreferencesfragment.sample.PrivacyPreferenceFragment"/>
+    <com.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        android:title="Notifications"
+        android:summary="Daily reminder notifications"
+        app:icon="@drawable/ic_notifications"
+        app:fragment="com.github.tstewart.materialpreferencesfragment.sample.NotificationsPreferenceFragment"/>
+    <com.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        android:title="Data Management"
+        android:summary="Manage and restore backups"
+        app:icon="@drawable/ic_data"
+        app:fragment="com.github.tstewart.materialpreferencesfragment.sample.DataPreferenceFragment"/>
+    <com.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+        android:title="All Settings Elements"
+        app:icon="@drawable/ic_draw"
+        app:fragment="com.github.tstewart.materialpreferencesfragment.sample.SamplePreferencesFragment"
+        app:summary="Testing stuff"/>
+    <PreferenceCategory
+        app:title="About">
+        <com.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+            app:title="Created By"
+            app:summary="Taylor Stewart"/>
+        <com.github.tstewart.materialpreferencesfragment.preferences.MaterialPreference
+            app:title="Version"
+            app:key="version_key"/>
+    </PreferenceCategory>
+</PreferenceScreen>
