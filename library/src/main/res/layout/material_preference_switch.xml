@@ -27,8 +27,7 @@
                 style="@style/TextAppearance.Material3.TitleLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical" />
 
             <TextView
                 android:id="@android:id/summary"
