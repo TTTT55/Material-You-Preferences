@@ -33,7 +33,8 @@
                 android:id="@android:id/summary"
                 style="Theme.AppTheme.MaterialPreference.Summary"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:maxWidth="280dp"/>
 
         </LinearLayout>
 
@@ -48,9 +49,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                app:trackTint="@color/switch_track_color"
+                android:clickable="false"
                 app:thumbTint="@color/switch_thumb_color"
-                android:clickable="false"/>
+                app:trackTint="@color/switch_track_color" />
         </RelativeLayout>
 
     </LinearLayout>
