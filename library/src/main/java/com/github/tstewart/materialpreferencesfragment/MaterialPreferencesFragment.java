@@ -10,6 +10,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.NestedScrollView;
+import androidx.fragment.app.FragmentManager;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -60,7 +61,7 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
         ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
         if(ab != null){
             ab.setDisplayHomeAsUpEnabled(true);
-            mToolbar.setNavigationOnClickListener(view1 -> getActivity().getSupportFragmentManager().popBackStack());
+            mToolbar.setNavigationOnClickListener(this::onNavigationClicked);
         }
 
         if(mSettingsScrollView != null
@@ -70,6 +71,16 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
             mToolbar.setBackgroundColor(COLOR_TRANSPARENT);
             mToolbarTitle.setAlpha(0);
             mSettingsScrollView.setOnScrollChangeListener(this);
+        }
+    }
+
+    private void onNavigationClicked(View view) {
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+
+        if(fm.getBackStackEntryCount() > 1) {
+            fm.popBackStack();
+        } else {
+            getActivity().onBackPressed();
         }
     }
 
