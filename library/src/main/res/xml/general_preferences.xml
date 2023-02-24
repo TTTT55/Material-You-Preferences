@@ -7,6 +7,7 @@
     <com.github.tstewart.materialpreferencesfragment.preferences.MaterialSwitchPreference
         android:title="Auto clipping"
         android:key="clipping_enabled"
+        android:summary="Remove empty lines from Accomplishment posts"
         android:icon="@drawable/settings_icon_clip"/>
     <com.github.tstewart.materialpreferencesfragment.preferences.MaterialListPreference
         android:title="Maximum Rating"

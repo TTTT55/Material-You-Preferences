@@ -33,6 +33,18 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            String title = savedInstanceState.getString("title");
+            if(title != null) {
+                mTitle.setText(title);
+            }
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("title", mTitle.getText().toString());
     }
 
     @Override
@@ -45,7 +57,7 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
 
         // Set title from args
         Bundle args = getArguments();
-        if(args != null) {
+        if(args != null && mTitle.getText() != null) {
             CharSequence title = args.getCharSequence("title");
             if (title != null) {
                 setTitle(title);
