@@ -78,11 +78,15 @@
 
     <style name="Theme.AppTheme.MaterialPreferencesFragment">
         <item name="android:layout">@layout/fragment_preferences</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
     </style>
 
     <style name="Theme.AppTheme.MaterialPreferencesFragment.Style">
         <item name="android:background">?colorSurface</item>
         <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
     </style>
 
     <style name="Theme.AppTheme.MaterialPreferencesFragment.Title" parent="@style/TextAppearance.Material3.HeadlineLarge">
