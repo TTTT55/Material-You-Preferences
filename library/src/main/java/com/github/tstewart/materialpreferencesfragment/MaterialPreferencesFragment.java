@@ -26,7 +26,7 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
     NestedScrollView mSettingsScrollView;
     MaterialToolbar mToolbar;
 
-    TextView mToolbarTitle;
+    //TextView mToolbarTitle;
 
     TextView mTitle;
 
@@ -52,7 +52,7 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
         super.onViewCreated(view, savedInstanceState);
         mSettingsScrollView = view.findViewById(R.id.settingsScrollView);
         mToolbar = view.findViewById(R.id.toolbar);
-        mToolbarTitle = view.findViewById(R.id.toolbarTitle);
+        //mToolbarTitle = view.findViewById(R.id.toolbarTitle);
         mTitle = view.findViewById(R.id.textViewTitle);
 
         // Set title from args
@@ -78,10 +78,10 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
 
         if(mSettingsScrollView != null
                 && mToolbar != null
-                && mToolbarTitle != null
+                //&& mToolbarTitle != null
                 && mTitle != null) {
             mToolbar.setBackgroundColor(COLOR_TRANSPARENT);
-            mToolbarTitle.setAlpha(0);
+            //mToolbarTitle.setAlpha(0);
             mSettingsScrollView.setOnScrollChangeListener(this);
         }
     }
@@ -105,7 +105,7 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
         float titleAlpha = Float.max(0, (float)(titleLocation[1] - 100) / 100);
         float toolbarAlpha = (float) -titleLocation[1] / 100;
         mTitle.setAlpha(titleAlpha);
-        mToolbarTitle.setAlpha(toolbarAlpha);
+        //mToolbarTitle.setAlpha(toolbarAlpha);
 
         if(titleLocation[1]<=100) {
             mToolbar.setBackgroundColor(COLOR_ON_SURFACE_INVERSE);
@@ -118,11 +118,11 @@ public abstract class MaterialPreferencesFragment extends PreferenceFragmentComp
 
     public void setTitle(CharSequence title) {
         mTitle.setText(title);
-        mToolbarTitle.setText(title);
+        //mToolbarTitle.setText(title);
     }
 
     public void setTitle(int stringRes) {
         mTitle.setText(stringRes);
-        mToolbarTitle.setText(stringRes);
+        //mToolbarTitle.setText(stringRes);
     }
 }
