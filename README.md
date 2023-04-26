@@ -1,4 +1,6 @@
 # Android-Preferences-M3
+
+[![Release](https://jitpack.io/v/com.github.TTTT55/Material-You-Preferences.svg)](https://jitpack.io/#com.github.TTTT55/Material-You-Preferences)
 Replica of official Settings page for M3, for use with Preferences library
 
 ### Usage
